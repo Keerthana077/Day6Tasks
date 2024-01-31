@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(name, age, place, gender, contactNumber, emailId) {
+                this.name = name
+                this.age = age
+                this.place = place
+                this.gender = gender
+                this.contactNumber = contactNumber
+                this.emailId = emailId
+                console.log(this.name)
+            }
+            getAge() {
+                console.log(`${this.name} is ${this.age} years old`)
+            }
+            getContactDetails() {
+                console.log(`You can Reach ${this.name} at "${this.contactNumber}" or "${this.emailId}"`)
+            }
+
+        }
+        let p1 = new Person("John", 20, 'chennai', 'male', 9848687521, 'john@gmail.com')
+        console.log(p1)
+        p1.getAge()
+        p1.getContactDetails()
+
+        //destructuring
+        let { name, age, gender, contactNumber, emailId } = p1
+        console.log(`${name} is ${age} years old`)
+    </script>
+</body>
+
+</html>

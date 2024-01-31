@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Uber {
+            // Constructor
+            constructor(kms) {
+                this.kms = kms,
+                    this.price = kms * 10
+            }
+            getPrice() {
+                console.log(`Cost of your ride is Rs.${this.price}`)
+            }
+            //methods 
+            applyDiscount() {
+                let discountAmount = (25 / this.price) * 100
+                let priceAfterDiscount = this.price - discountAmount// console.log(`As a privelge customer , i got an discount and Price After Discount is Rs.${priceAfterDiscount.toFixed()}`)
+                return `You've got discount of Rs.${discountAmount.toFixed()},Amount to be paid Rs.${priceAfterDiscount.toFixed()}`
+
+            }
+        }
+        console.log("First Ride:")
+        let ride1 = new Uber(30)
+        ride1.getPrice()
+        console.log("Second Ride: (Discount Applied)")
+        let ride2 = new Uber(10)
+        ride2.getPrice()
+        console.log(ride2.applyDiscount())
+    </script>
+</body>
+
+</html>
